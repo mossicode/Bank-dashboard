@@ -1,0 +1,23 @@
+import { cn } from '../../utils/common';
+
+function ArrowDownIcon({ className = '', ...props }) {
+  return (
+    <svg
+      width='0'
+      height='10'
+      viewBox='0 0 8 8'
+      fill='none'
+      className={cn('', className)}
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M7.5355 4.17157L4.35352 7.35355C4.15826 7.54882 3.84167 7.54882 3.64641 7.35355L0.464432 4.17157C0.269169 3.97631 0.269169 3.65973 0.464432 3.46447C0.659694 3.2692 0.976276 3.2692 1.17154 3.46447L3.49997 5.79289L3.49997 4.98696e-08L4.49997 3.79447e-08L4.49997 5.79289L6.82839 3.46447C7.02365 3.2692 7.34024 3.2692 7.5355 3.46447C7.73076 3.65973 7.73076 3.97631 7.5355 4.17157Z'
+        fill='CurrentColor'
+      />
+    </svg>
+  );
+}
+export default ArrowDownIcon;

@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #2d60ff;
+  --color-deep-blue: #1814f3;
+  --color-light-blue:#E7EDFF;
+  --color-charcoal-blue: #343c6a;
+  --color-dark-black:#232323;
+  --color-soft-red: #fe5c73;
+  --color-mint-green: #41d4a8;
+  --color-royal-blue: #396aff;
+  --color-aqua-green: #16dbcc;
+  --color-dark-green: #36e0d3;
+  --color-light-green: #dcfaf8;
+  --color-amber: #ffbb38;
+  --color-coral-red: #ff4b4a;
+  --color-neon-magenta: #fa00ff;
+  --color-dusty-blue: #718ebf;
+  --color-light-gray: #b1b1b1;
+  --color-vivid-amber: #fcaa0b;
+  --color-light-amber:#fff5d9;
+  --color-light-rose: #ff82ac;
+  --color-light-red: #ffe0eb;
+  --color-frosted-blue:#e7edff;
+  --color-soft-cherry:#ffe0eb;
+  --color-off-white: #f5f7fa;
+  --color-pale-blue: #4c49ed;
+  --color-blue-shade: #0a06f4;
+  --color-dark-navy:#333B69;
+  --color-gray-dark: #9199af80;
+  --color-azureish-White: #dfeaf2;
+  --color-blueberry: #539bff;
+  --color-light-slate-blue: #8ba3cb;
+  --color-light-slate-gray: #EDF0F7;
+  --color-cloud-white: #FFFFFF26;
+  --color-transparent-white: #FFFFFF00;
+  --color-mist-white: #FFFFFF80;
+  --color-silver-white: #9199AF80;
+  --color-piggy-pink: #FFE0EB;
+  --color-deep-koamaru: ##333B69;
+  --color-slight-gray: #EDF1F7;
+
+  /* font */
+  --font-inter: 'Inter', sans-serif;
+
+  /* font sizes */
+  --text-2.5xl: 1.75rem;
+  --text-1xs: 13px;
+  --text-10: 10px;
+  --text-11: 11px;
+
+  /*padding bottom  */
+  --padding-bottom-4.5: 18px;
+  /* line height */
+  --leading-full: 100%;
+
+  /* letter spacing */
+  --tracking-0: 0%;
+
+  /* sizes */
+  --size-15: 3.75rem;
+
+  /* radius */
+  --radius-10: 40px;
+  --radius-2.5: 10px;
+  --radius-5: 20px ;
+  --radius-11: 50px;
+
+    /* width */
+  --width-730: 730px;
+  --width-540: 540px;
+  --width-480: 480px;
+
+    /* border */
+  --border-1: 1px;
+
+    /* radius */
+  --radius-20: 20px;
+  
+    /* height */
+  --height-720: 720px;
+
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* outline around chart */
+.outlineNone {
+    border: none !important;
+    outline: none !important;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
