@@ -5,12 +5,18 @@ import { useState } from 'react';
 
 export default function Layout() {
   const [isSidebar, setIsSidebar] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
   return (
     <>
       {!isSidebar ? (
         <div className='flex bg-gray-100 h-screen '>
           <div className='max-md:hidden bg-white h-screen max-h-screen'>
-            <Sidebar />
+            <Sidebar
+              setIsSidebar={setIsSidebar}
+              collapsed={isSidebarCollapsed}
+              onToggleCollapsed={setIsSidebarCollapsed}
+            />
           </div>
           <div className='w-full overflow-y-scroll'>
             <div>
