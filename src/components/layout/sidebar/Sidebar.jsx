@@ -6,12 +6,18 @@ import { cn } from '../../../utils/common';
 
 import SidebarItem from './SidebarItem';
 
-export default function Sidebar({ setIsSidebar, collapsed = false, onToggleCollapsed }) {
+export default function Sidebar({
+  setIsSidebar,
+  collapsed = false,
+  onToggleCollapsed,
+}) {
   const [isCollapsed, setIsCollapsed] = useState(collapsed);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    function checkMobile() {
+      setIsMobile(window.innerWidth < 768);
+    }
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -55,15 +61,15 @@ export default function Sidebar({ setIsSidebar, collapsed = false, onToggleColla
           })}
         >
           <Logo
-            className={cn('mb-0 py-2 flex-shrink-0', {
-              'max-w-[48px]': isCollapsed,
+            className={cn('mb-0 py-2 shrink-0', {
+              'max-w-12': isCollapsed,
             })}
           />
-          {!isMobile && !isCollapsed && (
+          {!isMobile && (
             <button
               onClick={handleToggleCollapsed}
               className={cn(
-                'p-2 rounded-lg text-light-gray hover:text-primary hover:bg-primary/5 transition-all duration-200 flex-shrink-0',
+                'p-2 rounded-lg text-light-gray hover:text-primary hover:bg-primary/5 transition-all duration-200 shrink-0',
                 isCollapsed && 'rotate-180'
               )}
               aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
