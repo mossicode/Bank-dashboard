@@ -11,14 +11,16 @@ export default function SidebarItem({
 }) {
   const location = useLocation();
   const isActive =
-    location.pathname === path || (path !== '/' && location.pathname.startsWith(path));
+    location.pathname === path ||
+    (path !== '/' && location.pathname.startsWith(path));
 
   return (
     <NavLink
       className={cn(
         'group relative w-full flex items-center py-3.5 ps-5 cursor-pointer text-light-gray hover:text-primary active:text-primary transition-colors duration-200',
         {
-          'text-primary bg-primary/5': isActive,
+          'text-primary bg-primary/10 font-semibold': isActive,
+          'text-light-gray': !isActive,
           className,
         }
       )}
@@ -27,7 +29,7 @@ export default function SidebarItem({
     >
       <div
         className={cn(
-          'absolute left-0 top-0 w-1.5 h-full bg-blue-600 opacity-0 group-hover:opacity-100 rounded-r transition-opacity duration-200',
+          'absolute left-0 top-0 w-1.5 h-full bg-primary opacity-0 group-hover:opacity-100 rounded-r transition-opacity duration-200',
           {
             'opacity-100': isActive,
           }
@@ -36,7 +38,7 @@ export default function SidebarItem({
 
       <Icon
         className={cn('size-6 flex-shrink-0', { 'text-primary': isActive })}
-        aria-hidden="true"
+        aria-hidden='true'
       />
 
       {!collapsed && (
